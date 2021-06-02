@@ -81,7 +81,7 @@ def login_page(request):
 
         
         else:
-            messages.error(request,'your username or password is invalid')
+            messages.error(request,'your Username or Password is invalid')
             return redirect(login_page)
             
 
