@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+
+
+{% block content%}
+
+<div class="col-lg-5 shadow p-4 mx-auto">
+<h1>Login</h1>
+<form action= ''method="POST">
+    {% csrf_token %}
+    
+  
+    <label for="name" class="form-label" >username</label>
+    <input type="username" class="form-control"  name="uname" style="width: 40%;">
+    
+  
+    <label for="exampleInputPassword" class="form-label">Password</label>
+    <input type="password" class="form-control" name="password1" style="width: 40%;">
+    <br>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+<div>
+
+
+
+{% endblock content%}

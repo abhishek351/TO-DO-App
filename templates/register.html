@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+
+
+{% block content%}
+
+
+<div class = "container">
+<form method= "POST">
+ {%csrf_token%}
+  <div class="col-lg-5 shadow p-4 mx-auto">
+  <h1>register</h1>
+  
+    <label for="exampleInputEmail1" class="form-label">username</label>
+    <input type="name" class="form-control" name="username" style="width: 60%;" required>
+    
+  
+    <label for="exampleInputEmail1" class="form-label">email</label>
+    <input type="email" class="form-control" name="email"  style="width: 60%;"required>
+  
+
+  
+    <label for="fname" class="form-label">first name</label>
+    <input type="name" class="form-control" name="fname" style="width: 60%;" required>
+  
+
+  
+    <label for="lname" class="form-label">last name</label>
+    <input type="name" class="form-control" name="lname" style="width: 60%;" required>
+  
+
+
+    <label for="exampleInputPassword" class="form-label">Password</label>
+    <input type="password" class="form-control" name="Password" style="width: 60%;" required>
+    <br>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
+</div>
+
+
+
+{% endblock content%}
+
+
+ 
+
+
+
+
+   
+        
+      
+
+    
+

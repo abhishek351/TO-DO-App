@@ -1,0 +1,64 @@
+{% extends 'base.html' %}
+
+
+{% block content%}
+
+
+<center>
+
+
+<br>
+<div class="container" >
+
+
+
+<form action= ''method="POST">
+    {% csrf_token %}
+
+
+
+
+    <input type="text" name="title"  placeholder="Enter Your Task name" required  style="border-radius: 5px; padding: 10px;"/><br><br> 
+    <input type="text" name="desc"   placeholder="   Task description" required style="border-radius: 5px; padding: 30px;"/><br><br> 
+     <button type="submit" class="btn btn-primary">Submit</button>
+     </form>
+</div>
+<br>
+<br>
+
+<style>
+td, th {
+  border: 1px solid black;
+  text-align: center;
+  padding: 15px;
+  font-family: cursive;
+  background-color: mistyrose;
+}
+
+</style>
+
+
+<table style= "font-family: arial, sans-serif;">
+ <tr >
+    <th>NO.</th>
+    <th>title</th>
+    <th>description</th>
+    <th>Actions</th>
+  </tr>
+
+  {% for Todo in todoes %}
+    <tr>
+      <th scope="row">{{forloop.counter}}</th>
+      <td>{{Todo.title | title}}</td>
+      <td>{{Todo.desc}}</td>
+      <td><a href="{% url "delete_task" Todo.id %}">Delete</a></td> 
+
+    </tr>
+  {% endfor %}
+</table>
+</center>
+{% endblock content%}
+
+
+
+
